@@ -19,17 +19,21 @@
     "test": "exit 0",
     "watch": "npm run build-master -- --watch",
     "wipe-es6biblio": "echo \"{}\" > node_modules/ecmarkup/es6biblio.json",
-    "check-commit": "node scripts/check-commit"
+    "check-commit": "node scripts/check-commit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "tc39/ecma262",
   "author": "ECMA TC39",
   "license": "SEE LICENSE IN https://tc39.es/ecma262/#sec-copyright-and-software-license",
   "homepage": "https://tc39.es/ecma262/",
   "dependencies": {
-    "ecmarkup": "^3.19.0"
+    "ecmarkup": "^3.19.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@alrra/travis-scripts": "^2.1.0",
     "jsdom": "^15.0.0"
-  }
+  },
+  "snyk": true
 }
